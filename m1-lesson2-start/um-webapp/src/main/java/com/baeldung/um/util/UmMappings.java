@@ -7,6 +7,11 @@ public final class UmMappings {
     public static final String ROLES = "roles";
 
     // discoverability
+    public static final String AUTHENTICATION = "authentication";
+
+    private UmMappings() {
+        throw new AssertionError();
+    }
 
     public static final class Singular {
 
@@ -14,12 +19,6 @@ public final class UmMappings {
         public static final String PRIVILEGE = "privilege";
         public static final String ROLE = "role";
 
-    }
-
-    public static final String AUTHENTICATION = "authentication";
-
-    private UmMappings() {
-        throw new AssertionError();
     }
 
     // API

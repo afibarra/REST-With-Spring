@@ -16,6 +16,10 @@ public final class Um {
 
     // privileges
 
+    private Um() {
+        throw new AssertionError();
+    }
+
     public static final class Privileges {
 
         // User
@@ -34,15 +38,15 @@ public final class Um {
 
     public static final class Roles {
 
-        /** A placeholder role for administrator. */
+        /**
+         * A placeholder role for administrator.
+         */
         public static final String ROLE_ADMIN = "ROLE_ADMIN";
-        /** A placeholder role for enduser. */
+        /**
+         * A placeholder role for enduser.
+         */
         public static final String ROLE_ENDUSER = "ROLE_ENDUSER";
 
-    }
-
-    private Um() {
-        throw new AssertionError();
     }
 
 }

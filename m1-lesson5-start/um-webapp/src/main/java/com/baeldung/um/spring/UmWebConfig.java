@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@ComponentScan({ "com.baeldung.um.web" })
+@ComponentScan({"com.baeldung.um.web"})
 @EnableWebMvc
 public class UmWebConfig implements WebMvcConfigurer {
 

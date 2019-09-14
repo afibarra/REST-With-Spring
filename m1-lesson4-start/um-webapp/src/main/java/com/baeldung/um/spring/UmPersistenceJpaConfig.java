@@ -1,9 +1,5 @@
 package com.baeldung.um.spring;
 
-import java.util.Properties;
-
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -17,9 +13,12 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.sql.DataSource;
+import java.util.Properties;
+
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.baeldung.um.persistence" })
+@ComponentScan({"com.baeldung.um.persistence"})
 @EnableJpaRepositories(basePackages = "com.baeldung.um.persistence.dao")
 public class UmPersistenceJpaConfig {
 
@@ -36,7 +35,7 @@ public class UmPersistenceJpaConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan(new String[] { "com.baeldung.um" });
+        em.setPackagesToScan(new String[]{"com.baeldung.um"});
         final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
         em.setJpaProperties(additionalProperties());

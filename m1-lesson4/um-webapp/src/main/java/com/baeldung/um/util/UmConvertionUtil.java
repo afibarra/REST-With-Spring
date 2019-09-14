@@ -1,14 +1,14 @@
 package com.baeldung.um.util;
 
-import java.util.Collection;
-import java.util.Set;
-
 import com.baeldung.um.persistence.model.Privilege;
 import com.baeldung.um.persistence.model.Role;
 import com.google.common.base.Function;
 import com.google.common.base.Functions;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Sets;
+
+import java.util.Collection;
+import java.util.Set;
 
 public final class UmConvertionUtil {
 
@@ -19,7 +19,7 @@ public final class UmConvertionUtil {
     // API
 
     public static Set<Privilege> convertRolesToPrivileges(final Iterable<Role> roles) {
-        final Set<Privilege> privileges = Sets.<Privilege> newHashSet();
+        final Set<Privilege> privileges = Sets.<Privilege>newHashSet();
         for (final Role roleOfUser : roles) {
             privileges.addAll(roleOfUser.getPrivileges());
         }

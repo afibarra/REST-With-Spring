@@ -5,9 +5,9 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ // @formatter:off
-    PersistenceSpringIntegrationTest.class,
-    ServiceSpringIntegrationTest.class,
-    WebSpringIntegrationTest.class
+        PersistenceSpringIntegrationTest.class,
+        ServiceSpringIntegrationTest.class,
+        WebSpringIntegrationTest.class
 }) // @formatter:on
 public class IntegrationTestSuite {
     //
